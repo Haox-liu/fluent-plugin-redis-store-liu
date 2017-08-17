@@ -83,7 +83,7 @@ To determine what _value_ in every event data to be srtored, you have two option
 Installation
 ------------
 
-    /usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-redis-store
+    gem install fluent-plugin-redis-store-liu
 
 Configuration
 -------------

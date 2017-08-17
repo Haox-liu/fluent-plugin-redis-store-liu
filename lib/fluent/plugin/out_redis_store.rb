@@ -26,6 +26,7 @@ module Fluent
 
     def initialize
       super
+      require 'oj'
       require 'redis'
       require 'msgpack'
     end
@@ -203,7 +204,8 @@ module Fluent
       value = traverse(record, @value_path)
       case @format_type
       when 'json'
-        value.to_json
+        #value.to_json
+        value = Oj.dump(value)
       when 'msgpack'
         value.to_msgpack
       else
